@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(), // The landing screen of your app
+      home: const HomeScreen(), // The landing screen of your app
     );
   }
 }
