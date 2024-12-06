@@ -6,6 +6,8 @@ import 'trash_detection_page.dart'; // Trash detection page file
 import 'live_bottle_detection.dart'; // Live Bottle Detection page file
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -15,9 +17,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<Widget> _pages = [
     // Pages for each navigation item
-    Center(child: Text("Home Screen")), // Home screen content
+    const Center(child: Text("Home Screen")), // Home screen content
     CameraPage(), // Camera page content
-    ProfilePage(), // Profile page content
+    const ProfilePage(), // Profile page content
     LiveBottleDetectionPage(), // Real-time video detection page
     LiveBottleDetectionPage(), // Live bottle detection page
   ];
@@ -34,17 +36,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_titles[_currentIndex], style: TextStyle(color: Colors.white)),
+        title: Text(_titles[_currentIndex], style: const TextStyle(color: Colors.white)),
         backgroundColor: Colors.blue,
       ),
       body: _currentIndex == 0
           ? ListView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         children: [
           ListTile(
-            leading: Icon(Icons.video_call, color: Colors.blue), // Video icon
-            title: Text('Real-time Video Detection', style: TextStyle(fontSize: 18)),
-            trailing: Icon(Icons.arrow_forward_ios, size: 16), // ">" symbol
+            leading: const Icon(Icons.video_call, color: Colors.blue), // Video icon
+            title: const Text('Real-time Video Detection', style: TextStyle(fontSize: 18)),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16), // ">" symbol
             onTap: () {
               // Redirect to the real-time detection page
               Navigator.push(
@@ -53,37 +55,37 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: Icon(Icons.image, color: Colors.blue), // Image icon
-            title: Text('Image Detection', style: TextStyle(fontSize: 18)),
-            trailing: Icon(Icons.arrow_forward_ios, size: 16), // ">" symbol
+            leading: const Icon(Icons.image, color: Colors.blue), // Image icon
+            title: const Text('Image Detection', style: TextStyle(fontSize: 18)),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16), // ">" symbol
             onTap: () {
               // Redirect to Image Detection page
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ImageScreen()), // Navigate to ImagePage
+                MaterialPageRoute(builder: (context) => const ImageScreen()), // Navigate to ImagePage
               );
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: Icon(Icons.delete, color: Colors.blue), // Trash icon
-            title: Text('Trash Detection', style: TextStyle(fontSize: 18)),
-            trailing: Icon(Icons.arrow_forward_ios, size: 16), // ">" symbol
+            leading: const Icon(Icons.delete, color: Colors.blue), // Trash icon
+            title: const Text('Trash Detection', style: TextStyle(fontSize: 18)),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16), // ">" symbol
             onTap: () {
               // Redirect to Trash Detection page
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TrashDetectionPage()), // Navigate to TrashDetectionPage
+                MaterialPageRoute(builder: (context) => const TrashDetectionPage()), // Navigate to TrashDetectionPage
               );
             },
           ),
-          Divider(),
+          const Divider(),
           ListTile(
-            leading: Icon(Icons.local_drink, color: Colors.blue), // Bottle icon
-            title: Text('Live Bottle Detection', style: TextStyle(fontSize: 18)),
-            trailing: Icon(Icons.arrow_forward_ios, size: 16), // ">" symbol
+            leading: const Icon(Icons.local_drink, color: Colors.blue), // Bottle icon
+            title: const Text('Live Bottle Detection', style: TextStyle(fontSize: 18)),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 16), // ">" symbol
             onTap: () {
               // Redirect to Live Bottle Detection page
               Navigator.push(
@@ -105,16 +107,16 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white, // Set background color of the bottom nav bar
         selectedItemColor: Colors.blue, // Color of the selected item
         unselectedItemColor: Colors.grey, // Color of the unselected items
-        items: [
-          BottomNavigationBarItem(
+        items: const [
+           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home", // Home button
           ),
-          BottomNavigationBarItem(
+           BottomNavigationBarItem(
             icon: Icon(Icons.camera),
             label: "Camera", // Camera button
           ),
-          BottomNavigationBarItem(
+           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: "Profile", // Profile button
           ),

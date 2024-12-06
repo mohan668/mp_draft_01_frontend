@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart'; // Make sure this file exists
+import 'screens/home_screen.dart'; // Make sure this file exists
 
 void main() {
   runApp(const MyApp());
